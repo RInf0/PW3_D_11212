@@ -63,47 +63,47 @@ $gambar = [
 
     <!-- Carousel -->
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
+            <div class="carousel-indicators">
 
-        <?php foreach ($gambar as $i => $gbr) {
-          // Foreach untuk menampilkan indikator
-        ?>
-            <button 
-                type="button"
-                data-bs-target="#myCarousel"
-                data-bs-slide-to="<?php echo $i; ?>"
-                class="<?php echo $i === 0 ? "active" : ""; ?>"
-                aria-label="Slide <?php echo $i+1; ?>"
-            ></button>
-          <?php } ?>
-      
-          </div>
-          <div class="carousel-inner">
+                <?php foreach ($gambar as $i => $gbr) {
+                    // Foreach untuk menampilkan indikator
+                ?>
+                    <button 
+                      type="button" 
+                      data-bs-target="#myCarousel" 
+                      data-bs-slide-to="<?php echo $i; ?>"
+                      class="<?php echo $i === 0 ? "active" : ""; ?>" 
+                      aria-label="Slide <?php echo $i + 1; ?>">
+                    </button>
+                <?php } ?>
 
-              <?php foreach ($gambar as $i => $gbr) {
-                  // Foreach untuk menampilkan gambar
-              ?>
+            </div>
+            <div class="carousel-inner">
+
+                <?php foreach ($gambar as $i => $gbr) {
+                    // Foreach untuk menampilkan gambar
+                ?>
                   <div class="carousel-item <?php echo $i === 0 ? "active" : ""; ?>">
-                    <img 
-                        src="<?php echo $gbr; ?>"
-                        class="carousel-img"
+                      <img 
+                        src="<?php echo 
+                        $gbr; ?>" 
+                        class="carousel-img" 
                         role="img"
-                        aria-label="Gambar ke-<?php echo ($i + 1); ?>"
-                        focusable = "false"
-                      />
-                    </div>
-              <?php } ?>
-            
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="myCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"> Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="myCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden"> Next</span>
-          </button>
-    </div>
+                        aria-label="Gambar ke-<?php echo ($i + 1); ?>" 
+                        focusable="false" />
+                  </div>
+                <?php } ?>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
     <div class="container">
 
